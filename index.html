@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Tiny Cakes Bakery By Kiwi</title>
+
+        <!-- Bootstrap CDN Link -->
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Font Awesome CDN Link -->
+
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+        <!-- External Stylesheet Link -->
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <style>
+        /* Page Heading */
+        
+            .navbar {
+                background-color: pink;
+                margin-bottom: 0;
+                text-align: center;
+            }
+            
+        /* Page Container */
+        
+            .container {
+                background-image: url("http://via.placeholder.com/300x300");
+                background-repeat: repeat repeat;
+                background-attachment: fixed;
+            }
+            
+        /* About Section */
+            
+            #about {
+                background-color: purple;
+            }
+            .img-right {
+                background-color: lightblue;
+            }
+            
+        /* About Section Responsive */
+            
+            @media screen and (min-width: 992px) {
+                .about {
+                    margin-top: 300px;
+                }
+            }
+            @media screen and (max-width: 992px) {
+                #about {
+                    margin-top: 200px;
+                }
+            }
+            
+        /* History Section */
+            
+            #history {
+                background-color: gold;
+            }
+            .img-left {
+                background-color: red;
+            }
+            
+        /* History Section Responsive */
+        
+            @media screen and (min-width: 992px) {
+                .history {
+                    margin-bottom: 250px;
+                }
+            }
+            @media screen and (max-width: 992px) {
+                #history {
+                    margin-bottom: 250px;
+                }
+            }
+            
+            
+        /* Store Section */
+            
+            .store {
+                background-color: green;
+            }
+            h1, h2, p {
+                text-align: center;
+            }
+            
+        /* Contact Section */
+            
+            .contact {
+                background-color: pink;
+                margin-top: 200px;
+            }
+            
+        </style>
+
+    </head>
+
+    <body>
+        
+        
+        <!-- Page Heading and Links -->
+        
+        <nav class="navbar navbar-defult">
+        <div class="container-fluid">
+            <div>
+                <img src="http://via.placeholder.com/398x90">
+            </div>
+            <div class="navbar">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                	<span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> 
+                </button>
+                <ul class="nav nav-pills">
+                    <li role="presentation"><a href="#about">About</a></li>
+                    <li role="presentation"><a href="#history">History</a></li>
+                    <li role="presentation"><a href="#store">Store</a></li>
+                    <li role="presentation"><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        </nav>
+        
+        <!-- About Section -->
+        
+        <section class="container">
+            <div class="row">
+                <main id="about" class="about col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <h2>About</h2>
+                    <p>Cupcake ipsum dolor sit amet apple pie. Biscuit chocolate cake cake I love dessert topping gingerbread donut gummies. Cupcake wafer muffin lemon drops sugar plum I love macaroon I love sesame snaps. Pie tart muffin cupcake gingerbread marzipan cupcake ice cream cake. Cheesecake oat cake jujubes. Halvah chocolate cake bonbon ice cream ice cream. Chupa chups tootsie roll tootsie roll jelly beans candy. Jelly brownie chocolate cake I love I love sweet roll cheesecake. Sesame snaps donut gummi bears biscuit tiramisu oat cake chocolate cake I love. Danish chocolate cake pastry brownie sesame snaps toffee gingerbread. Bear claw caramels caramels pie cookie donut I love icing. Sesame snaps cupcake wafer cake I love cookie topping. Chocolate cake biscuit apple pie bonbon. I love I love sesame snaps gummies danish I love ice cream.</p>
+                </main>
+                <aside class="about img-right col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <h2>Placeholder Text</h2>
+                    <p>Cupcake ipsum dolor sit amet apple pie. Biscuit chocolate cake cake I love dessert topping gingerbread donut gummies. Cupcake wafer muffin lemon drops sugar plum I love macaroon I love sesame snaps. Pie tart muffin cupcake gingerbread marzipan cupcake ice cream cake. Cheesecake oat cake jujubes. Halvah chocolate cake bonbon ice cream ice cream. Chupa chups tootsie roll tootsie roll jelly beans candy. Jelly brownie chocolate cake I love I love sweet roll cheesecake. Sesame snaps donut gummi bears biscuit tiramisu oat cake chocolate cake I love. Danish chocolate cake pastry brownie sesame snaps toffee gingerbread. Bear claw caramels caramels pie cookie donut I love icing. Sesame snaps cupcake wafer cake I love cookie topping. Chocolate cake biscuit apple pie bonbon. I love I love sesame snaps gummies danish I love ice cream.</p>
+                </aside>
+            </div>
+            
+            <!-- History of Company -->
+            
+            <div class="row">
+                <aside class="history img-left col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <h2>Placeholder text</h2>
+                    <p>Cupcake ipsum dolor sit amet apple pie. Biscuit chocolate cake cake I love dessert topping gingerbread donut gummies. Cupcake wafer muffin lemon drops sugar plum I love macaroon I love sesame snaps. Pie tart muffin cupcake gingerbread marzipan cupcake ice cream cake. Cheesecake oat cake jujubes. Halvah chocolate cake bonbon ice cream ice cream. Chupa chups tootsie roll tootsie roll jelly beans candy. Jelly brownie chocolate cake I love I love sweet roll cheesecake. Sesame snaps donut gummi bears biscuit tiramisu oat cake chocolate cake I love. Danish chocolate cake pastry brownie sesame snaps toffee gingerbread. Bear claw caramels caramels pie cookie donut I love icing. Sesame snaps cupcake wafer cake I love cookie topping. Chocolate cake biscuit apple pie bonbon. I love I love sesame snaps gummies danish I love ice cream.</p>
+                </aside>
+                <main id="history" class="history col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <h2>History of Company</h2>
+                    <p>Cupcake ipsum dolor sit amet apple pie. Biscuit chocolate cake cake I love dessert topping gingerbread donut gummies. Cupcake wafer muffin lemon drops sugar plum I love macaroon I love sesame snaps. Pie tart muffin cupcake gingerbread marzipan cupcake ice cream cake. Cheesecake oat cake jujubes. Halvah chocolate cake bonbon ice cream ice cream. Chupa chups tootsie roll tootsie roll jelly beans candy. Jelly brownie chocolate cake I love I love sweet roll cheesecake. Sesame snaps donut gummi bears biscuit tiramisu oat cake chocolate cake I love. Danish chocolate cake pastry brownie sesame snaps toffee gingerbread. Bear claw caramels caramels pie cookie donut I love icing. Sesame snaps cupcake wafer cake I love cookie topping. Chocolate cake biscuit apple pie bonbon. I love I love sesame snaps gummies danish I love ice cream.</p>
+                </main>
+            </div>
+        </section>
+        
+        <!-- Store Front -->
+        
+        <section id="store" class="container">
+            <div class="row">
+                <main class="store">
+                    <h1>Store</h1>
+                </main>
+            </div>
+            
+            
+            
+            
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                    <div class="img-thumbnail">
+                        <img src="http://via.placeholder.com/200x200">
+                    </div>
+                    <div class="Caption">
+                        <h3>Thumbnail label</h3>
+                        <p>Some sample text. Some sample text.</p>
+                        <p>
+                            <a href = "#" class = "btn btn-primary" role = "button">
+                                Button
+                            </a> 
+            
+                            <a href = "#" class = "btn btn-default" role = "button">
+                               Button
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                
+
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                    <div class="img-thumbnail">
+                        <img src="http://via.placeholder.com/200x200">
+                    </div>
+                    <div class="Caption">
+                        <h3>Thumbnail label</h3>
+                        <p>Some sample text. Some sample text.</p>
+                        <p>
+                            <a href = "#" class = "btn btn-primary" role = "button">
+                                Button
+                            </a> 
+            
+                            <a href = "#" class = "btn btn-default" role = "button">
+                               Button
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                
+
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                    <div class="img-thumbnail">
+                        <img src="http://via.placeholder.com/200x200">
+                    </div>
+                    <div class="Caption">
+                        <h3>Thumbnail label</h3>
+                        <p>Some sample text. Some sample text.</p>
+                        <p>
+                            <a href = "#" class = "btn btn-primary" role = "button">
+                                Button
+                            </a> 
+            
+                            <a href = "#" class = "btn btn-default" role = "button">
+                               Button
+                            </a>
+                        </p>
+                    </div>
+                </div>
+   
+                
+
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                    <div class="img-thumbnail">
+                        <img src="http://via.placeholder.com/200x200">
+                    </div>
+                    <div class="Caption">
+                        <h3>Thumbnail label</h3>
+                        <p>Some sample text. Some sample text.</p>
+                        <p>
+                            <a href = "#" class = "btn btn-primary" role = "button">
+                                Button
+                            </a> 
+            
+                            <a href = "#" class = "btn btn-default" role = "button">
+                               Button
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+            
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                    <div class="img-thumbnail">
+                        <img src="http://via.placeholder.com/200x200">
+                    </div>
+                    <div class="Caption">
+                        <h3>Thumbnail label</h3>
+                        <p>Some sample text. Some sample text.</p>
+                        <p>
+                            <a href = "#" class = "btn btn-primary" role = "button">
+                                Button
+                            </a> 
+            
+                            <a href = "#" class = "btn btn-default" role = "button">
+                               Button
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+            
+
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                    <div class="img-thumbnail">
+                        <img src="http://via.placeholder.com/200x200">
+                    </div>
+                    <div class="Caption">
+                        <h3>Thumbnail label</h3>
+                        <p>Some sample text. Some sample text.</p>
+                        <p>
+                            <a href = "#" class = "btn btn-primary" role = "button">
+                                Button
+                            </a> 
+            
+                            <a href = "#" class = "btn btn-default" role = "button">
+                               Button
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+            
+
+            </div>
+        </section>
+
+        <!-- Contact Section/Footer -->
+        
+        <div class="container-fluid">
+            <div class="row">
+                <footer id="contact" class="contact">
+                    <h2>Contact Us</h2>
+                    <p><a href="mailto:letitiakiwijones@gmail.com">Email Tiny Cakes</a></p>
+                    <hr>
+                    <p>&copy; 2017 Tiny Cakes Bakery</p>
+                </footer>
+            </div>
+        </div>
+
+
+
+        <!-- JavaScript CDN Link -->
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        <!-- jQuery CDN Link -->
+
+        <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+
+    </body>
+
+</html>
