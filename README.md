@@ -1,4 +1,4 @@
-# tiny-cakes-2
+# tiny-cakes
 *************
 *           *
 *  Way      *
