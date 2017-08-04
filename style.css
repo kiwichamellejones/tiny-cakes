@@ -1,0 +1,81 @@
+/* Page Heading */
+
+.navbar {
+    background-color: pink;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+#logo {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Page Container */
+
+.container {
+    background-image: url("http://via.placeholder.com/300x300");
+    background-repeat: repeat repeat;
+    background-attachment: fixed;
+}
+
+/* About Section */
+
+#about {
+    background-color: purple;
+}
+.img-right {
+    background-color: lightblue;
+}
+
+/* About Section Responsive */
+
+@media screen and (min-width: 992px) {
+    .about {
+        margin-top: 300px;
+    }
+}
+@media screen and (max-width: 992px) {
+    #about {
+        margin-top: 200px;
+    }
+}
+
+/* History Section */
+
+#history {
+    background-color: gold;
+}
+.img-left {
+    background-color: red;
+}
+
+/* History Section Responsive */
+
+@media screen and (min-width: 992px) {
+    .history {
+        margin-bottom: 250px;
+    }
+}
+@media screen and (max-width: 992px) {
+    #history {
+        margin-bottom: 250px;
+    }
+}
+
+
+/* Store Section */
+
+.store {
+    background-color: green;
+}
+h1, h2, p {
+    text-align: center;
+}
+
+/* Contact Section */
+
+.contact {
+    background-color: pink;
+    margin-top: 200px;
+}

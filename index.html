@@ -20,85 +20,6 @@
 
         <link rel="stylesheet" type="text/css" href="style.css">
 
-        <style>
-        /* Page Heading */
-        
-            .navbar {
-                background-color: pink;
-                margin-bottom: 0;
-                text-align: center;
-            }
-            
-        /* Page Container */
-        
-            .container {
-                background-image: url("http://via.placeholder.com/300x300");
-                background-repeat: repeat repeat;
-                background-attachment: fixed;
-            }
-            
-        /* About Section */
-            
-            #about {
-                background-color: purple;
-            }
-            .img-right {
-                background-color: lightblue;
-            }
-            
-        /* About Section Responsive */
-            
-            @media screen and (min-width: 992px) {
-                .about {
-                    margin-top: 300px;
-                }
-            }
-            @media screen and (max-width: 992px) {
-                #about {
-                    margin-top: 200px;
-                }
-            }
-            
-        /* History Section */
-            
-            #history {
-                background-color: gold;
-            }
-            .img-left {
-                background-color: red;
-            }
-            
-        /* History Section Responsive */
-        
-            @media screen and (min-width: 992px) {
-                .history {
-                    margin-bottom: 250px;
-                }
-            }
-            @media screen and (max-width: 992px) {
-                #history {
-                    margin-bottom: 250px;
-                }
-            }
-            
-            
-        /* Store Section */
-            
-            .store {
-                background-color: green;
-            }
-            h1, h2, p {
-                text-align: center;
-            }
-            
-        /* Contact Section */
-            
-            .contact {
-                background-color: pink;
-                margin-top: 200px;
-            }
-            
-        </style>
 
     </head>
 
@@ -107,27 +28,30 @@
         
         <!-- Page Heading and Links -->
         
+        
         <nav class="navbar navbar-defult">
-        <div class="container-fluid">
-            <div>
-                <img src="http://via.placeholder.com/398x90">
-            </div>
-            <div class="navbar">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                	<span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span> 
-                </button>
-                <ul class="nav nav-pills">
-                    <li role="presentation"><a href="#about">About</a></li>
-                    <li role="presentation"><a href="#history">History</a></li>
-                    <li role="presentation"><a href="#store">Store</a></li>
-                    <li role="presentation"><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-        </nav>
+	        <div class="container-fluid">
+	            <div class="navbar-header">
+	            	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	                	<span class="sr-only">Toggle navigation</span>
+	                    <span class="icon-bar"></span>
+	                    <span class="icon-bar"></span>
+	                    <span class="icon-bar"></span>
+	                </button>
+	            	<div>
+	                	<img id="logo" src="images/logos/tiny-cakes-text-logo.png">
+	            	</div>
+	                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		                <ul class="nav nav-pills">
+		                    <li role="presentation"><a href="#about">About</a></li>
+		                    <li role="presentation"><a href="#history">History</a></li>
+		                    <li role="presentation"><a href="#store">Store</a></li>
+		                    <li role="presentation"><a href="#contact">Contact</a></li>
+		                </ul>
+		             </div><!-- /.navbar-collapse -->
+	            </div><!-- /.navbar-header -->
+	        </div><!-- /.container-fluid -->
+        </nav><!-- /.navbar .navbar-defult -->
         
         <!-- About Section -->
         
