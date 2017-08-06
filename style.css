@@ -1,22 +1,38 @@
+/* Body */
+
+body {
+    background-image: url("images/backgrounds/sakura.png");
+    
+}
+
 /* Page Heading */
 
-.navbar {
+#nav {
     background-color: pink;
-    margin-bottom: 0;
-    text-align: center;
+    height: 80px;
+}
+.navbar-header{
+    display: flex;
+}
+
+.logo {
+    padding: 15px 15px;
+    flex-grow: 3;
+
 }
 
 #logo {
     width: 80%;
-    margin: 0 auto;
+
 }
 
 /* Page Container */
 
 .container {
-    background-image: url("http://via.placeholder.com/300x300");
+    background-image: url("images/backgrounds/sakura.png");
     background-repeat: repeat repeat;
     background-attachment: fixed;
+    padding-top: 70px;
 }
 
 /* About Section */
