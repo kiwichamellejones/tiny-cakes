@@ -1,256 +1,464 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tiny Cakes Bakery</title>
+  <meta
+    name="description"
+    content="Tiny Cakes is a boutique bakery storefront concept featuring handcrafted cupcakes, cookies, muffins, and café pairings."
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <nav class="navbar container">
+      <a href="#top" class="brand" aria-label="Tiny Cakes home">
+        <img
+          src="images/logos/tiny-cakes-text-logo.png"
+          alt="Tiny Cakes Bakery"
+          class="brand-logo"
+        />
+      </a>
 
-    <head>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#custom-orders">Custom Orders</a>
+        <a href="#pairings">Pairings</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+        <button class="cart-button" id="cartButton" aria-label="Open cart">
+          Cart <span id="cartCount">0</span>
+        </button>
+      </div>
+    </nav>
+  </header>
 
-        <title>Tiny Cakes Bakery By Kiwi</title>
+  <main>
+    <section class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Boutique Bakery Experience</p>
+          <h1>Handcrafted desserts designed for sweet everyday moments.</h1>
+          <p class="hero-text">
+            Tiny Cakes brings together elegant cupcakes, warm baked treats, and
+            café-inspired pairings in one polished bakery storefront experience.
+          </p>
 
-        <!-- Bootstrap CDN Link -->
+          <div class="hero-actions">
+            <a href="#menu" class="btn btn-primary">View Menu</a>
+            <a href="#custom-orders" class="btn btn-secondary">Custom Orders</a>
+          </div>
 
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-        <!-- Font Awesome CDN Link -->
-
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
-        <!-- External Stylesheet Link -->
-
-        <link rel="stylesheet" type="text/css" href="style.css">
-
-
-    </head>
-
-    <body id="home">
-        
-        
-        <!-- Page Heading and Links -->
-        
-        
-        
-	    
-		<nav id="nav" class="navbar navbar-default navbar-fixed-top" role="navigation">
-	        <div class="container-fluid">
-	            <div class="navbar-header">
-	            	 <div class="navbar-brand-parent">
-	                	<a class="logo navbar-brand" href="#home"><img alt="Brand" id="logo" src="images/logos/tiny-cakes-text-logo.png"></a>
-	                </div>
-	            	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-	                	<span class="sr-only">Toggle navigation</span>
-	                    <span class="icon-bar"></span>
-	                    <span class="icon-bar"></span>
-	                    <span class="icon-bar"></span>
-	                </button>
-	               
-	            </div><!-- .navbar-header -->
-	            <div></div>
-	            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		            <ul class="nav navbar-nav">
-	                    <li role=""><a href="#about">About</a></li>
-	                    <li role=""><a href="#history">History</a></li>
-	                    <li role=""><a href="#store">Store</a></li>
-	                    <li role=""><a href="#contact">Contact</a></li>
-		            </ul>
-		        </div><!-- /.navbar-collapse -->
-	        </div><!-- /.container-fluid -->
-	    </nav><!-- /.navbar .navbar-default -->
-	   
-        
-        
-        <!-- About Section -->
-        
-        <section class="container">
-            <div class="row">
-                <main id="about" class="about col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <h2>About</h2>
-                    <p>Cupcake ipsum dolor sit amet apple pie. Biscuit chocolate cake cake I love dessert topping gingerbread donut gummies. Cupcake wafer muffin lemon drops sugar plum I love macaroon I love sesame snaps. Pie tart muffin cupcake gingerbread marzipan cupcake ice cream cake. Cheesecake oat cake jujubes. Halvah chocolate cake bonbon ice cream ice cream. Chupa chups tootsie roll tootsie roll jelly beans candy. Jelly brownie chocolate cake I love I love sweet roll cheesecake. Sesame snaps donut gummi bears biscuit tiramisu oat cake chocolate cake I love. Danish chocolate cake pastry brownie sesame snaps toffee gingerbread. Bear claw caramels caramels pie cookie donut I love icing. Sesame snaps cupcake wafer cake I love cookie topping. Chocolate cake biscuit apple pie bonbon. I love I love sesame snaps gummies danish I love ice cream.</p>
-                </main>
-                <aside class="about img-right col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <!-- <h2>Placeholder Text</h2>
-                    <p>Cupcake ipsum dolor sit amet apple pie. Biscuit chocolate cake cake I love dessert topping gingerbread donut gummies. Cupcake wafer muffin lemon drops sugar plum I love macaroon I love sesame snaps. Pie tart muffin cupcake gingerbread marzipan cupcake ice cream cake. Cheesecake oat cake jujubes. Halvah chocolate cake bonbon ice cream ice cream. Chupa chups tootsie roll tootsie roll jelly beans candy. Jelly brownie chocolate cake I love I love sweet roll cheesecake. Sesame snaps donut gummi bears biscuit tiramisu oat cake chocolate cake I love. Danish chocolate cake pastry brownie sesame snaps toffee gingerbread. Bear claw caramels caramels pie cookie donut I love icing. Sesame snaps cupcake wafer cake I love cookie topping. Chocolate cake biscuit apple pie bonbon. I love I love sesame snaps gummies danish I love ice cream.</p> -->
-                </aside>
-            </div>
-            
-            <!-- History of Company -->
-            
-            <div class="row">
-                <aside id="" class="history img-left col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                	<img src="">
-                    <!-- <h2>Placeholder text</h2>
-                    <p>Cupcake ipsum dolor sit amet apple pie. Biscuit chocolate cake cake I love dessert topping gingerbread donut gummies. Cupcake wafer muffin lemon drops sugar plum I love macaroon I love sesame snaps. Pie tart muffin cupcake gingerbread marzipan cupcake ice cream cake. Cheesecake oat cake jujubes. Halvah chocolate cake bonbon ice cream ice cream. Chupa chups tootsie roll tootsie roll jelly beans candy. Jelly brownie chocolate cake I love I love sweet roll cheesecake. Sesame snaps donut gummi bears biscuit tiramisu oat cake chocolate cake I love. Danish chocolate cake pastry brownie sesame snaps toffee gingerbread. Bear claw caramels caramels pie cookie donut I love icing. Sesame snaps cupcake wafer cake I love cookie topping. Chocolate cake biscuit apple pie bonbon. I love I love sesame snaps gummies danish I love ice cream.</p> -->
-                </aside>
-                <main id="history" class="history col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <h2>History of Company</h2>
-                    <p>Cupcake ipsum dolor sit amet apple pie. Biscuit chocolate cake cake I love dessert topping gingerbread donut gummies. Cupcake wafer muffin lemon drops sugar plum I love macaroon I love sesame snaps. Pie tart muffin cupcake gingerbread marzipan cupcake ice cream cake. Cheesecake oat cake jujubes. Halvah chocolate cake bonbon ice cream ice cream. Chupa chups tootsie roll tootsie roll jelly beans candy. Jelly brownie chocolate cake I love I love sweet roll cheesecake. Sesame snaps donut gummi bears biscuit tiramisu oat cake chocolate cake I love. Danish chocolate cake pastry brownie sesame snaps toffee gingerbread. Bear claw caramels caramels pie cookie donut I love icing. Sesame snaps cupcake wafer cake I love cookie topping. Chocolate cake biscuit apple pie bonbon. I love I love sesame snaps gummies danish I love ice cream.</p>
-                </main>
-            </div>
-        </section>
-        
-        <!-- Store Front -->
-        
-        <section id="store" class="container">
-            <div class="row">
-                <main class="store">
-                    <h1>Store</h1>
-                </main>
-            </div>
-            
-            
-            
-            
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-                    <div class="img-thumbnail">
-                        <img src="http://via.placeholder.com/200x200">
-                    </div>
-                    <div class="Caption">
-                        <h3>Thumbnail label</h3>
-                        <p>Some sample text. Some sample text.</p>
-                        <p>
-                            <a href = "#" class = "btn btn-primary" role = "button">
-                                Button
-                            </a> 
-            
-                            <a href = "#" class = "btn btn-default" role = "button">
-                               Button
-                            </a>
-                        </p>
-                    </div>
-                </div>
-
-                
-
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-                    <div class="img-thumbnail">
-                        <img src="http://via.placeholder.com/200x200">
-                    </div>
-                    <div class="Caption">
-                        <h3>Thumbnail label</h3>
-                        <p>Some sample text. Some sample text.</p>
-                        <p>
-                            <a href = "#" class = "btn btn-primary" role = "button">
-                                Button
-                            </a> 
-            
-                            <a href = "#" class = "btn btn-default" role = "button">
-                               Button
-                            </a>
-                        </p>
-                    </div>
-                </div>
-
-                
-
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-                    <div class="img-thumbnail">
-                        <img src="http://via.placeholder.com/200x200">
-                    </div>
-                    <div class="Caption">
-                        <h3>Thumbnail label</h3>
-                        <p>Some sample text. Some sample text.</p>
-                        <p>
-                            <a href = "#" class = "btn btn-primary" role = "button">
-                                Button
-                            </a> 
-            
-                            <a href = "#" class = "btn btn-default" role = "button">
-                               Button
-                            </a>
-                        </p>
-                    </div>
-                </div>
-   
-                
-
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-                    <div class="img-thumbnail">
-                        <img src="http://via.placeholder.com/200x200">
-                    </div>
-                    <div class="Caption">
-                        <h3>Thumbnail label</h3>
-                        <p>Some sample text. Some sample text.</p>
-                        <p>
-                            <a href = "#" class = "btn btn-primary" role = "button">
-                                Button
-                            </a> 
-            
-                            <a href = "#" class = "btn btn-default" role = "button">
-                               Button
-                            </a>
-                        </p>
-                    </div>
-                </div>
-
-            
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-                    <div class="img-thumbnail">
-                        <img src="http://via.placeholder.com/200x200">
-                    </div>
-                    <div class="Caption">
-                        <h3>Thumbnail label</h3>
-                        <p>Some sample text. Some sample text.</p>
-                        <p>
-                            <a href = "#" class = "btn btn-primary" role = "button">
-                                Button
-                            </a> 
-            
-                            <a href = "#" class = "btn btn-default" role = "button">
-                               Button
-                            </a>
-                        </p>
-                    </div>
-                </div>
-
-            
-
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-                    <div class="img-thumbnail">
-                        <img src="http://via.placeholder.com/200x200">
-                    </div>
-                    <div class="Caption">
-                        <h3>Thumbnail label</h3>
-                        <p>Some sample text. Some sample text.</p>
-                        <p>
-                            <a href = "#" class = "btn btn-primary" role = "button">
-                                Button
-                            </a> 
-            
-                            <a href = "#" class = "btn btn-default" role = "button">
-                               Button
-                            </a>
-                        </p>
-                    </div>
-                </div>
-
-            
-
-            </div>
-        </section>
-
-        <!-- Contact Section/Footer -->
-        
-        <div class="container-fluid">
-            <div class="row">
-                <footer id="contact" class="contact">
-                    <h2>Contact Us</h2>
-                    <p><a href="mailto:kchamelledesigns@gmail.com">Email Tiny Cakes</a></p>
-                    <p>&copy; 2017 Tiny Cakes Bakery</p>
-                </footer>
-            </div>
+          <ul class="hero-highlights">
+            <li>Small-batch desserts</li>
+            <li>Celebration-ready cupcakes</li>
+            <li>Static front-end build with HTML, CSS, and JS</li>
+          </ul>
         </div>
 
+        <div class="hero-visual reveal">
+          <div class="hero-card hero-card-main">
+            <img src="images/products/cupcakes-glitter.jpg" alt="Pastel glitter cupcakes" />
+          </div>
+          <div class="hero-card hero-card-accent">
+            <img src="images/products/cupcakes-cherry.jpg" alt="Cherry cupcake on pastel plate" />
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <section class="about section" id="about">
+      <div class="container about-grid">
+        <div class="about-brand reveal">
+          <img
+            src="images/logos/tiny-cakes-logo.png"
+            alt="Tiny Cakes icon logo"
+            class="about-logo"
+          />
+          <div>
+            <p class="eyebrow">About Tiny Cakes</p>
+            <h2>A bakery concept built around charm, detail, and presentation.</h2>
+            <p>
+              Tiny Cakes is a front-end bakery storefront concept focused on
+              elevated branding, menu storytelling, and polished user experience.
+              The site blends soft boutique visuals with interactive product
+              browsing to create a premium portfolio piece.
+            </p>
+          </div>
+        </div>
 
-        <!-- JavaScript CDN Link -->
+        <div class="about-image reveal">
+          <img src="images/products/muffin-bake.jpg" alt="Freshly baked muffins and baking tools" />
+        </div>
+      </div>
+    </section>
 
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <section class="featured section">
+      <div class="container featured-grid">
+        <div class="featured-copy reveal">
+          <p class="eyebrow">Signature Feature</p>
+          <h2>Cherry Blossom Cupcake</h2>
+          <p>
+            A delicate signature centerpiece styled to reflect the Tiny Cakes
+            brand palette—soft pink, elegant presentation, and a boutique dessert feel.
+          </p>
+          <button
+            class="btn btn-primary quick-view-trigger"
+            data-id="cherry-blossom-cupcake"
+          >
+            Quick View
+          </button>
+        </div>
 
-        <!-- jQuery CDN Link -->
+        <div class="featured-image reveal">
+          <img src="images/products/cupcakes-cherry.jpg" alt="Cherry Blossom Cupcake" />
+        </div>
+      </div>
+    </section>
 
-        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <section class="menu section" id="menu">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Signature Menu</p>
+          <h2>Browse desserts by category</h2>
+          <p>
+            Filter the menu to explore cupcakes, cookies, muffins, and café pairings.
+          </p>
+        </div>
 
-    </body>
+        <div class="filters reveal" role="group" aria-label="Product category filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="cupcake">Cupcakes</button>
+          <button class="filter-btn" data-filter="cookie">Cookies</button>
+          <button class="filter-btn" data-filter="muffin">Muffins</button>
+          <button class="filter-btn" data-filter="drink">Drinks</button>
+        </div>
 
+        <div class="menu-grid" id="menuGrid">
+          <article class="product-card reveal" data-category="cupcake">
+            <img src="images/products/cupcakes-lime.jpg" alt="Key Lime Cupcake" />
+            <div class="product-content">
+              <span class="product-tag">Cupcake</span>
+              <h3>Key Lime Cupcake</h3>
+              <p>Bright citrus flavor with smooth frosting and fresh garnish styling.</p>
+              <div class="product-footer">
+                <span class="price">$6</span>
+                <div class="product-actions">
+                  <button class="text-btn quick-view-trigger" data-id="key-lime-cupcake">View</button>
+                  <button class="btn btn-primary add-to-cart-btn" data-id="key-lime-cupcake">Add</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-category="cupcake">
+            <img src="images/products/cupcakes-chocolate.jpg" alt="Chocolate Dream Cupcake" />
+            <div class="product-content">
+              <span class="product-tag">Cupcake</span>
+              <h3>Chocolate Dream Cupcake</h3>
+              <p>Rich chocolate cake topped with creamy frosting and chocolate sprinkles.</p>
+              <div class="product-footer">
+                <span class="price">$6</span>
+                <div class="product-actions">
+                  <button class="text-btn quick-view-trigger" data-id="chocolate-dream-cupcake">View</button>
+                  <button class="btn btn-primary add-to-cart-btn" data-id="chocolate-dream-cupcake">Add</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-category="cupcake">
+            <img src="images/products/cupcakes-cherry.jpg" alt="Cherry Blossom Cupcake" />
+            <div class="product-content">
+              <span class="product-tag">Cupcake</span>
+              <h3>Cherry Blossom Cupcake</h3>
+              <p>A signature presentation piece with a soft pink swirl and cherry topper.</p>
+              <div class="product-footer">
+                <span class="price">$7</span>
+                <div class="product-actions">
+                  <button class="text-btn quick-view-trigger" data-id="cherry-blossom-cupcake">View</button>
+                  <button class="btn btn-primary add-to-cart-btn" data-id="cherry-blossom-cupcake">Add</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-category="cookie">
+            <img src="images/products/cookie-chip.jpg" alt="Chocolate Chip Cookie" />
+            <div class="product-content">
+              <span class="product-tag">Cookie</span>
+              <h3>Chocolate Chip Cookie</h3>
+              <p>Classic cookie with golden edges and generous chocolate chips.</p>
+              <div class="product-footer">
+                <span class="price">$4</span>
+                <div class="product-actions">
+                  <button class="text-btn quick-view-trigger" data-id="chocolate-chip-cookie">View</button>
+                  <button class="btn btn-primary add-to-cart-btn" data-id="chocolate-chip-cookie">Add</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-category="cookie">
+            <img src="images/products/cookie-chocolate.jpg" alt="Double Chocolate Cookie" />
+            <div class="product-content">
+              <span class="product-tag">Cookie</span>
+              <h3>Double Chocolate Cookie</h3>
+              <p>Deep cocoa flavor finished with a dusting of powdered sugar.</p>
+              <div class="product-footer">
+                <span class="price">$5</span>
+                <div class="product-actions">
+                  <button class="text-btn quick-view-trigger" data-id="double-chocolate-cookie">View</button>
+                  <button class="btn btn-primary add-to-cart-btn" data-id="double-chocolate-cookie">Add</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-category="muffin">
+            <img src="images/products/muffin-berries.jpg" alt="Berry Muffin" />
+            <div class="product-content">
+              <span class="product-tag">Muffin</span>
+              <h3>Berry Muffin</h3>
+              <p>Soft bakery muffin baked with berries and a warm café-style finish.</p>
+              <div class="product-footer">
+                <span class="price">$5</span>
+                <div class="product-actions">
+                  <button class="text-btn quick-view-trigger" data-id="berry-muffin">View</button>
+                  <button class="btn btn-primary add-to-cart-btn" data-id="berry-muffin">Add</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-category="muffin">
+            <img src="images/products/muffin-dots.jpg" alt="Cranberry Muffin" />
+            <div class="product-content">
+              <span class="product-tag">Muffin</span>
+              <h3>Cranberry Muffin</h3>
+              <p>A tall bakery muffin with bold paper styling and fruit-forward detail.</p>
+              <div class="product-footer">
+                <span class="price">$5</span>
+                <div class="product-actions">
+                  <button class="text-btn quick-view-trigger" data-id="cranberry-muffin">View</button>
+                  <button class="btn btn-primary add-to-cart-btn" data-id="cranberry-muffin">Add</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-category="drink">
+            <img src="images/products/coffee-latte.jpg" alt="Signature Latte" />
+            <div class="product-content">
+              <span class="product-tag">Drink</span>
+              <h3>Signature Latte</h3>
+              <p>A warm, café-inspired pairing crafted to complement dessert favorites.</p>
+              <div class="product-footer">
+                <span class="price">$5</span>
+                <div class="product-actions">
+                  <button class="text-btn quick-view-trigger" data-id="signature-latte">View</button>
+                  <button class="btn btn-primary add-to-cart-btn" data-id="signature-latte">Add</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-category="drink">
+            <img src="images/products/tea-herbal.jpg" alt="Herbal Tea" />
+            <div class="product-content">
+              <span class="product-tag">Drink</span>
+              <h3>Herbal Tea</h3>
+              <p>A light herbal pairing for slower moments and delicate sweet treats.</p>
+              <div class="product-footer">
+                <span class="price">$4</span>
+                <div class="product-actions">
+                  <button class="text-btn quick-view-trigger" data-id="herbal-tea">View</button>
+                  <button class="btn btn-primary add-to-cart-btn" data-id="herbal-tea">Add</button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="custom-orders section" id="custom-orders">
+      <div class="container custom-grid">
+        <div class="custom-image-stack reveal">
+          <img src="images/products/cupcakes-ships.jpg" alt="Custom event cupcakes" class="stack-main" />
+          <img src="images/products/cupcakes-dots.jpg" alt="Decorative custom cupcakes" class="stack-secondary" />
+        </div>
+
+        <div class="custom-copy reveal">
+          <p class="eyebrow">Custom Orders</p>
+          <h2>Desserts designed for birthdays, parties, and themed events.</h2>
+          <p>
+            Tiny Cakes highlights custom dessert styling through specialty cupcake
+            presentations that feel playful, elegant, and event-ready.
+          </p>
+          <a href="#contact" class="btn btn-primary">Start an Inquiry</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="pairings section" id="pairings">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Coffee & Tea Pairings</p>
+          <h2>Bring a café feel to the bakery experience</h2>
+        </div>
+
+        <div class="pairings-grid">
+          <article class="pairing-card reveal">
+            <img src="images/products/coffee-ground.jpg" alt="Ground coffee beans" />
+            <div class="pairing-copy">
+              <h3>Fresh Coffee Notes</h3>
+              <p>
+                Visual café styling helps expand Tiny Cakes beyond desserts into a
+                more complete brand experience.
+              </p>
+            </div>
+          </article>
+
+          <article class="pairing-card reveal">
+            <img src="images/products/coffee-latte.jpg" alt="Latte art in a cup" />
+            <div class="pairing-copy">
+              <h3>Warm Latte Pairings</h3>
+              <p>
+                A clean lifestyle image that adds warmth, texture, and premium café appeal.
+              </p>
+            </div>
+          </article>
+
+          <article class="pairing-card reveal">
+            <img src="images/products/tea-herbal.jpg" alt="Herbal tea cups" />
+            <div class="pairing-copy">
+              <h3>Herbal Tea Moments</h3>
+              <p>
+                Soft botanical tones connect beautifully with the Tiny Cakes color palette.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery section" id="gallery">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Sweet Moments</p>
+          <h2>A visual gallery of the Tiny Cakes world</h2>
+        </div>
+
+        <div class="gallery-grid">
+          <button class="gallery-item reveal lightbox-trigger" data-image="images/products/cupcakes-pink.jpg" data-alt="Pink cupcake collection">
+            <img src="images/products/cupcakes-pink.jpg" alt="Pink cupcake collection" />
+          </button>
+          <button class="gallery-item reveal lightbox-trigger" data-image="images/products/cupcakes-glitter.jpg" data-alt="Pastel glitter cupcakes">
+            <img src="images/products/cupcakes-glitter.jpg" alt="Pastel glitter cupcakes" />
+          </button>
+          <button class="gallery-item reveal lightbox-trigger" data-image="images/products/cupcakes-cherry.jpg" data-alt="Cherry cupcake feature">
+            <img src="images/products/cupcakes-cherry.jpg" alt="Cherry cupcake feature" />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials section">
+      <div class="container testimonials-shell reveal">
+        <p class="eyebrow">Testimonials</p>
+        <h2>Styled like a real bakery brand</h2>
+
+        <div class="testimonial-card">
+          <p class="testimonial-quote" id="testimonialQuote">
+            “Tiny Cakes feels polished, charming, and ready for a boutique brand launch.”
+          </p>
+          <p class="testimonial-name" id="testimonialName">— Portfolio Review</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="container contact-shell reveal">
+        <p class="eyebrow">Get in Touch</p>
+        <h2>Ready to order something sweet?</h2>
+        <p>
+          This project remains fully static for GitHub Pages, but the contact call-to-action
+          still gives the experience a realistic bakery finish.
+        </p>
+        <a href="mailto:kchamelledesigns@gmail.com?subject=Tiny%20Cakes%20Order%20Inquiry" class="btn btn-primary">
+          Email Tiny Cakes
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-shell">
+      <div>
+        <img
+          src="images/logos/tiny-cakes-logo.png"
+          alt="Tiny Cakes logo"
+          class="footer-logo"
+        />
+        <p class="footer-copy">Tiny Cakes Bakery — a boutique storefront concept built with HTML, CSS, and JavaScript.</p>
+      </div>
+      <a href="#top" class="back-to-top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="cart-header">
+      <h2>Your Order</h2>
+      <button class="cart-close" id="cartClose" aria-label="Close cart">×</button>
+    </div>
+
+    <div class="cart-items" id="cartItems">
+      <p class="cart-empty">Your cart is empty.</p>
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <strong id="cartTotal">$0</strong>
+      </div>
+      <button class="btn btn-secondary" id="clearCartBtn">Clear Cart</button>
+    </div>
+  </aside>
+
+  <div class="overlay" id="overlay"></div>
+
+  <div class="modal" id="productModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <button class="modal-close" id="modalClose" aria-label="Close product details">×</button>
+    <div class="modal-grid">
+      <div class="modal-image-wrap">
+        <img id="modalImage" src="" alt="" />
+      </div>
+      <div class="modal-content">
+        <span class="product-tag" id="modalCategory"></span>
+        <h2 id="modalTitle"></h2>
+        <p id="modalDescription"></p>
+        <div class="modal-footer">
+          <span class="price" id="modalPrice"></span>
+          <button class="btn btn-primary" id="modalAddToCart">Add to Order</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close image preview">×</button>
+    <img id="lightboxImage" src="" alt="" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
