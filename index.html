@@ -6,7 +6,7 @@
   <title>Tiny Cakes Bakery</title>
   <meta
     name="description"
-    content="Tiny Cakes is a boutique bakery storefront concept featuring handcrafted cupcakes, cookies, muffins, and café pairings."
+    content="Tiny Cakes is a boutique bakery storefront concept built with HTML, CSS, and JavaScript."
   />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -30,6 +30,7 @@
       <div class="nav-links">
         <a href="#about">About</a>
         <a href="#menu">Menu</a>
+        <a href="#ordering">Ordering</a>
         <a href="#custom-orders">Custom Orders</a>
         <a href="#pairings">Pairings</a>
         <a href="#gallery">Gallery</a>
@@ -46,10 +47,10 @@
       <div class="container hero-grid">
         <div class="hero-copy reveal">
           <p class="eyebrow">Boutique Bakery Experience</p>
-          <h1>Handcrafted desserts designed for sweet everyday moments.</h1>
+          <h1>Boutique Desserts for Every Celebration</h1>
           <p class="hero-text">
-            Tiny Cakes brings together elegant cupcakes, warm baked treats, and
-            café-inspired pairings in one polished bakery storefront experience.
+            Handcrafted cupcakes, cookies, and café treats made fresh for your
+            moments that matter. Designed with elegance, baked with care.
           </p>
 
           <div class="hero-actions">
@@ -58,18 +59,24 @@
           </div>
 
           <ul class="hero-highlights">
-            <li>Small-batch desserts</li>
-            <li>Celebration-ready cupcakes</li>
-            <li>Static front-end build with HTML, CSS, and JS</li>
+            <li>Small-batch desserts with boutique presentation</li>
+            <li>Custom cupcake styling for events and celebrations</li>
+            <li>Built with HTML, CSS, and JavaScript only</li>
           </ul>
         </div>
 
         <div class="hero-visual reveal">
           <div class="hero-card hero-card-main">
-            <img src="images/products/cupcakes-glitter.jpg" alt="Pastel glitter cupcakes" />
+            <img
+              src="images/products/cupcakes-glitter.jpg"
+              alt="Pastel glitter cupcakes"
+            />
           </div>
           <div class="hero-card hero-card-accent">
-            <img src="images/products/cupcakes-cherry.jpg" alt="Cherry cupcake on pastel plate" />
+            <img
+              src="images/products/cupcakes-cherry.jpg"
+              alt="Cherry cupcake on a pastel plate"
+            />
           </div>
         </div>
       </div>
@@ -89,14 +96,17 @@
             <p>
               Tiny Cakes is a front-end bakery storefront concept focused on
               elevated branding, menu storytelling, and polished user experience.
-              The site blends soft boutique visuals with interactive product
-              browsing to create a premium portfolio piece.
+              The site blends soft boutique visuals with interactive browsing to
+              create a premium portfolio-ready bakery experience.
             </p>
           </div>
         </div>
 
         <div class="about-image reveal">
-          <img src="images/products/muffin-bake.jpg" alt="Freshly baked muffins and baking tools" />
+          <img
+            src="images/products/muffin-bake.jpg"
+            alt="Freshly baked muffins and baking tools"
+          />
         </div>
       </div>
     </section>
@@ -107,8 +117,8 @@
           <p class="eyebrow">Signature Feature</p>
           <h2>Cherry Blossom Cupcake</h2>
           <p>
-            A delicate signature centerpiece styled to reflect the Tiny Cakes
-            brand palette—soft pink, elegant presentation, and a boutique dessert feel.
+            A polished centerpiece dessert styled to reflect the Tiny Cakes
+            identity—soft color, elegant detail, and a handcrafted bakery feel.
           </p>
           <button
             class="btn btn-primary quick-view-trigger"
@@ -119,7 +129,10 @@
         </div>
 
         <div class="featured-image reveal">
-          <img src="images/products/cupcakes-cherry.jpg" alt="Cherry Blossom Cupcake" />
+          <img
+            src="images/products/cupcakes-cherry.jpg"
+            alt="Cherry Blossom Cupcake"
+          />
         </div>
       </div>
     </section>
@@ -130,7 +143,8 @@
           <p class="eyebrow">Signature Menu</p>
           <h2>Browse desserts by category</h2>
           <p>
-            Filter the menu to explore cupcakes, cookies, muffins, and café pairings.
+            Explore cupcakes, cookies, muffins, and café pairings through a
+            boutique storefront layout.
           </p>
         </div>
 
@@ -142,7 +156,7 @@
           <button class="filter-btn" data-filter="drink">Drinks</button>
         </div>
 
-        <div class="menu-grid" id="menuGrid">
+        <div class="menu-grid">
           <article class="product-card reveal" data-category="cupcake">
             <img src="images/products/cupcakes-lime.jpg" alt="Key Lime Cupcake" />
             <div class="product-content">
@@ -150,7 +164,10 @@
               <h3>Key Lime Cupcake</h3>
               <p>Bright citrus flavor with smooth frosting and fresh garnish styling.</p>
               <div class="product-footer">
-                <span class="price">$6</span>
+                <div>
+                  <span class="price">$6</span>
+                  <span class="price-note">Starting at</span>
+                </div>
                 <div class="product-actions">
                   <button class="text-btn quick-view-trigger" data-id="key-lime-cupcake">View</button>
                   <button class="btn btn-primary add-to-cart-btn" data-id="key-lime-cupcake">Add</button>
@@ -166,7 +183,10 @@
               <h3>Chocolate Dream Cupcake</h3>
               <p>Rich chocolate cake topped with creamy frosting and chocolate sprinkles.</p>
               <div class="product-footer">
-                <span class="price">$6</span>
+                <div>
+                  <span class="price">$6</span>
+                  <span class="price-note">Starting at</span>
+                </div>
                 <div class="product-actions">
                   <button class="text-btn quick-view-trigger" data-id="chocolate-dream-cupcake">View</button>
                   <button class="btn btn-primary add-to-cart-btn" data-id="chocolate-dream-cupcake">Add</button>
@@ -182,7 +202,10 @@
               <h3>Cherry Blossom Cupcake</h3>
               <p>A signature presentation piece with a soft pink swirl and cherry topper.</p>
               <div class="product-footer">
-                <span class="price">$7</span>
+                <div>
+                  <span class="price">$7</span>
+                  <span class="price-note">Starting at</span>
+                </div>
                 <div class="product-actions">
                   <button class="text-btn quick-view-trigger" data-id="cherry-blossom-cupcake">View</button>
                   <button class="btn btn-primary add-to-cart-btn" data-id="cherry-blossom-cupcake">Add</button>
@@ -198,7 +221,10 @@
               <h3>Chocolate Chip Cookie</h3>
               <p>Classic cookie with golden edges and generous chocolate chips.</p>
               <div class="product-footer">
-                <span class="price">$4</span>
+                <div>
+                  <span class="price">$4</span>
+                  <span class="price-note">Starting at</span>
+                </div>
                 <div class="product-actions">
                   <button class="text-btn quick-view-trigger" data-id="chocolate-chip-cookie">View</button>
                   <button class="btn btn-primary add-to-cart-btn" data-id="chocolate-chip-cookie">Add</button>
@@ -214,7 +240,10 @@
               <h3>Double Chocolate Cookie</h3>
               <p>Deep cocoa flavor finished with a dusting of powdered sugar.</p>
               <div class="product-footer">
-                <span class="price">$5</span>
+                <div>
+                  <span class="price">$5</span>
+                  <span class="price-note">Starting at</span>
+                </div>
                 <div class="product-actions">
                   <button class="text-btn quick-view-trigger" data-id="double-chocolate-cookie">View</button>
                   <button class="btn btn-primary add-to-cart-btn" data-id="double-chocolate-cookie">Add</button>
@@ -230,7 +259,10 @@
               <h3>Berry Muffin</h3>
               <p>Soft bakery muffin baked with berries and a warm café-style finish.</p>
               <div class="product-footer">
-                <span class="price">$5</span>
+                <div>
+                  <span class="price">$5</span>
+                  <span class="price-note">Starting at</span>
+                </div>
                 <div class="product-actions">
                   <button class="text-btn quick-view-trigger" data-id="berry-muffin">View</button>
                   <button class="btn btn-primary add-to-cart-btn" data-id="berry-muffin">Add</button>
@@ -246,7 +278,10 @@
               <h3>Cranberry Muffin</h3>
               <p>A tall bakery muffin with bold paper styling and fruit-forward detail.</p>
               <div class="product-footer">
-                <span class="price">$5</span>
+                <div>
+                  <span class="price">$5</span>
+                  <span class="price-note">Starting at</span>
+                </div>
                 <div class="product-actions">
                   <button class="text-btn quick-view-trigger" data-id="cranberry-muffin">View</button>
                   <button class="btn btn-primary add-to-cart-btn" data-id="cranberry-muffin">Add</button>
@@ -262,7 +297,10 @@
               <h3>Signature Latte</h3>
               <p>A warm, café-inspired pairing crafted to complement dessert favorites.</p>
               <div class="product-footer">
-                <span class="price">$5</span>
+                <div>
+                  <span class="price">$5</span>
+                  <span class="price-note">Starting at</span>
+                </div>
                 <div class="product-actions">
                   <button class="text-btn quick-view-trigger" data-id="signature-latte">View</button>
                   <button class="btn btn-primary add-to-cart-btn" data-id="signature-latte">Add</button>
@@ -278,7 +316,10 @@
               <h3>Herbal Tea</h3>
               <p>A light herbal pairing for slower moments and delicate sweet treats.</p>
               <div class="product-footer">
-                <span class="price">$4</span>
+                <div>
+                  <span class="price">$4</span>
+                  <span class="price-note">Starting at</span>
+                </div>
                 <div class="product-actions">
                   <button class="text-btn quick-view-trigger" data-id="herbal-tea">View</button>
                   <button class="btn btn-primary add-to-cart-btn" data-id="herbal-tea">Add</button>
@@ -290,19 +331,48 @@
       </div>
     </section>
 
+    <section class="ordering section" id="ordering">
+      <div class="container">
+        <div class="ordering-box reveal">
+          <p class="eyebrow">Ordering Information</p>
+          <h2>Sweet details before you order</h2>
+          <ul>
+            <li>Custom orders require 24–48 hour notice</li>
+            <li>Perfect for birthdays, parties, and celebrations</li>
+            <li>Pickup available — local delivery coming soon</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="banner">
+      <div class="banner-overlay">
+        <p class="eyebrow">Freshly Styled</p>
+        <h2>Made Fresh Daily</h2>
+      </div>
+    </section>
+
     <section class="custom-orders section" id="custom-orders">
       <div class="container custom-grid">
         <div class="custom-image-stack reveal">
-          <img src="images/products/cupcakes-ships.jpg" alt="Custom event cupcakes" class="stack-main" />
-          <img src="images/products/cupcakes-dots.jpg" alt="Decorative custom cupcakes" class="stack-secondary" />
+          <img
+            src="images/products/cupcakes-ships.jpg"
+            alt="Custom event cupcakes"
+            class="stack-main"
+          />
+          <img
+            src="images/products/cupcakes-dots.jpg"
+            alt="Decorative custom cupcakes"
+            class="stack-secondary"
+          />
         </div>
 
         <div class="custom-copy reveal">
           <p class="eyebrow">Custom Orders</p>
           <h2>Desserts designed for birthdays, parties, and themed events.</h2>
           <p>
-            Tiny Cakes highlights custom dessert styling through specialty cupcake
-            presentations that feel playful, elegant, and event-ready.
+            Tiny Cakes highlights custom dessert styling through specialty
+            cupcake presentations that feel playful, elegant, and event-ready.
           </p>
           <a href="#contact" class="btn btn-primary">Start an Inquiry</a>
         </div>
@@ -322,8 +392,7 @@
             <div class="pairing-copy">
               <h3>Fresh Coffee Notes</h3>
               <p>
-                Visual café styling helps expand Tiny Cakes beyond desserts into a
-                more complete brand experience.
+                A warm coffee visual that expands Tiny Cakes into a richer café-inspired brand.
               </p>
             </div>
           </article>
@@ -333,7 +402,7 @@
             <div class="pairing-copy">
               <h3>Warm Latte Pairings</h3>
               <p>
-                A clean lifestyle image that adds warmth, texture, and premium café appeal.
+                Clean lifestyle imagery that adds comfort, texture, and premium presentation.
               </p>
             </div>
           </article>
@@ -343,7 +412,7 @@
             <div class="pairing-copy">
               <h3>Herbal Tea Moments</h3>
               <p>
-                Soft botanical tones connect beautifully with the Tiny Cakes color palette.
+                Soft botanical tones connect naturally with the Tiny Cakes color palette.
               </p>
             </div>
           </article>
@@ -372,6 +441,19 @@
       </div>
     </section>
 
+    <section class="cta section">
+      <div class="container">
+        <div class="cta-box reveal">
+          <p class="eyebrow">Event Orders</p>
+          <h2>Planning an event?</h2>
+          <p>
+            Let Tiny Cakes create custom desserts tailored to your celebration.
+          </p>
+          <a href="#contact" class="btn btn-primary">Start Custom Order</a>
+        </div>
+      </div>
+    </section>
+
     <section class="testimonials section">
       <div class="container testimonials-shell reveal">
         <p class="eyebrow">Testimonials</p>
@@ -391,10 +473,13 @@
         <p class="eyebrow">Get in Touch</p>
         <h2>Ready to order something sweet?</h2>
         <p>
-          This project remains fully static for GitHub Pages, but the contact call-to-action
-          still gives the experience a realistic bakery finish.
+          This project stays fully static for GitHub Pages while still delivering
+          a polished bakery storefront experience.
         </p>
-        <a href="mailto:kchamelledesigns@gmail.com?subject=Tiny%20Cakes%20Order%20Inquiry" class="btn btn-primary">
+        <a
+          href="mailto:kchamelledesigns@gmail.com?subject=Tiny%20Cakes%20Order%20Inquiry"
+          class="btn btn-primary"
+        >
           Email Tiny Cakes
         </a>
       </div>
@@ -409,7 +494,10 @@
           alt="Tiny Cakes logo"
           class="footer-logo"
         />
-        <p class="footer-copy">Tiny Cakes Bakery — a boutique storefront concept built with HTML, CSS, and JavaScript.</p>
+        <p class="footer-copy">
+          Tiny Cakes Bakery — a boutique storefront concept built with HTML, CSS,
+          and JavaScript.
+        </p>
       </div>
       <a href="#top" class="back-to-top">Back to top ↑</a>
     </div>
@@ -427,7 +515,7 @@
 
     <div class="cart-footer">
       <div class="cart-total">
-        <span>Total</span>
+        <span id="cartSummary">Subtotal (0 items)</span>
         <strong id="cartTotal">$0</strong>
       </div>
       <button class="btn btn-secondary" id="clearCartBtn">Clear Cart</button>

@@ -86,6 +86,7 @@ const STORAGE_KEY = "tiny-cakes-cart";
 
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelector(".nav-links");
+
 const filterButtons = document.querySelectorAll(".filter-btn");
 const productCards = document.querySelectorAll(".product-card");
 const quickViewButtons = document.querySelectorAll(".quick-view-trigger");
@@ -97,6 +98,7 @@ const cartClose = document.getElementById("cartClose");
 const cartItems = document.getElementById("cartItems");
 const cartCount = document.getElementById("cartCount");
 const cartTotal = document.getElementById("cartTotal");
+const cartSummary = document.getElementById("cartSummary");
 const clearCartBtn = document.getElementById("clearCartBtn");
 
 const overlay = document.getElementById("overlay");
@@ -119,9 +121,6 @@ const testimonialQuote = document.getElementById("testimonialQuote");
 const testimonialName = document.getElementById("testimonialName");
 const revealElements = document.querySelectorAll(".reveal");
 
-let activeProductId = null;
-let cart = loadCart();
-
 const testimonials = [
   {
     quote:
@@ -141,6 +140,8 @@ const testimonials = [
 ];
 
 let testimonialIndex = 0;
+let activeProductId = null;
+let cart = loadCart();
 
 function loadCart() {
   try {
@@ -159,6 +160,10 @@ function findProduct(productId) {
   return products.find((product) => product.id === productId);
 }
 
+function formatPrice(value) {
+  return `$${value}`;
+}
+
 function addToCart(productId) {
   const existingItem = cart.find((item) => item.id === productId);
 
@@ -167,6 +172,7 @@ function addToCart(productId) {
   } else {
     const product = findProduct(productId);
     if (!product) return;
+
     cart.push({
       id: product.id,
       quantity: 1
@@ -175,6 +181,11 @@ function addToCart(productId) {
 
   saveCart();
   renderCart();
+
+  const product = findProduct(productId);
+  if (product) {
+    showToast(`${product.name} added to cart`);
+  }
 }
 
 function removeFromCart(productId) {
@@ -196,15 +207,12 @@ function clearCart() {
   renderCart();
 }
 
-function formatPrice(value) {
-  return `$${value}`;
-}
-
 function renderCart() {
   if (!cart.length) {
     cartItems.innerHTML = `<p class="cart-empty">Your cart is empty.</p>`;
     cartCount.textContent = "0";
     cartTotal.textContent = "$0";
+    cartSummary.textContent = "Subtotal (0 items)";
     return;
   }
 
@@ -235,6 +243,7 @@ function renderCart() {
 
   cartCount.textContent = String(totalItems);
   cartTotal.textContent = formatPrice(totalPrice);
+  cartSummary.textContent = `Subtotal (${totalItems} item${totalItems === 1 ? "" : "s"})`;
 
   document.querySelectorAll(".remove-item-btn").forEach((button) => {
     button.addEventListener("click", () => {
@@ -245,14 +254,17 @@ function renderCart() {
 
 function openCart() {
   cartDrawer.classList.add("active");
-  overlay.classList.add("active");
   cartDrawer.setAttribute("aria-hidden", "false");
+  overlay.classList.add("active");
 }
 
 function closeCart() {
   cartDrawer.classList.remove("active");
-  overlay.classList.remove("active");
   cartDrawer.setAttribute("aria-hidden", "true");
+
+  if (!productModal.classList.contains("active") && !lightbox.classList.contains("active")) {
+    overlay.classList.remove("active");
+  }
 }
 
 function openModal(productId) {
@@ -268,8 +280,8 @@ function openModal(productId) {
   modalPrice.textContent = formatPrice(product.price);
 
   productModal.classList.add("active");
-  overlay.classList.add("active");
   productModal.setAttribute("aria-hidden", "false");
+  overlay.classList.add("active");
 }
 
 function closeModal() {
@@ -277,7 +289,7 @@ function closeModal() {
   productModal.setAttribute("aria-hidden", "true");
   activeProductId = null;
 
-  if (!lightbox.classList.contains("active") && !cartDrawer.classList.contains("active")) {
+  if (!cartDrawer.classList.contains("active") && !lightbox.classList.contains("active")) {
     overlay.classList.remove("active");
   }
 }
@@ -294,7 +306,7 @@ function closeLightbox() {
   lightbox.classList.remove("active");
   lightbox.setAttribute("aria-hidden", "true");
 
-  if (!productModal.classList.contains("active") && !cartDrawer.classList.contains("active")) {
+  if (!cartDrawer.classList.contains("active") && !productModal.classList.contains("active")) {
     overlay.classList.remove("active");
   }
 }
@@ -322,14 +334,31 @@ function setupRevealAnimations() {
         }
       });
     },
-    {
-      threshold: 0.12
-    }
+    { threshold: 0.12 }
   );
 
-  revealElements.forEach((element) => {
-    observer.observe(element);
+  revealElements.forEach((element) => observer.observe(element));
+}
+
+function showToast(message) {
+  const existingToast = document.querySelector(".toast");
+  if (existingToast) {
+    existingToast.remove();
+  }
+
+  const toast = document.createElement("div");
+  toast.className = "toast";
+  toast.textContent = message;
+  document.body.appendChild(toast);
+
+  requestAnimationFrame(() => {
+    toast.classList.add("show");
   });
+
+  setTimeout(() => {
+    toast.classList.remove("show");
+    setTimeout(() => toast.remove(), 300);
+  }, 2200);
 }
 
 navToggle?.addEventListener("click", () => {
@@ -387,16 +416,16 @@ lightboxTriggers.forEach((button) => {
 lightboxClose.addEventListener("click", closeLightbox);
 
 overlay.addEventListener("click", () => {
+  closeCart();
   closeModal();
   closeLightbox();
-  closeCart();
 });
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
+    closeCart();
     closeModal();
     closeLightbox();
-    closeCart();
   }
 });
 

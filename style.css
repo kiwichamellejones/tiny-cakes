@@ -1,16 +1,17 @@
 :root {
   --bg: #fffaf8;
-  --surface: rgba(255, 255, 255, 0.82);
+  --surface: rgba(255, 255, 255, 0.84);
   --surface-strong: #ffffff;
-  --text: #2d2522;
-  --muted: #6f6662;
-  --line: rgba(45, 37, 34, 0.1);
-  --pink-soft: #f8e5e8;
+  --text: #2f2422;
+  --muted: #6d6461;
+  --line: rgba(47, 36, 34, 0.1);
+  --pink-soft: #f9e7eb;
   --pink-mid: #efcfd7;
-  --pink-deep: #d98ca2;
-  --sage: #a8bea0;
-  --sage-deep: #708767;
-  --shadow: 0 20px 60px rgba(52, 31, 36, 0.12);
+  --pink-deep: #d88ca0;
+  --sage: #a9c09f;
+  --sage-deep: #6f8667;
+  --shadow: 0 22px 60px rgba(50, 29, 34, 0.12);
+  --shadow-strong: 0 26px 70px rgba(0, 0, 0, 0.15);
   --radius-lg: 28px;
   --radius-md: 20px;
   --radius-sm: 14px;
@@ -33,7 +34,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--text);
   background:
-    linear-gradient(rgba(255, 250, 248, 0.92), rgba(255, 250, 248, 0.95)),
+    linear-gradient(rgba(255, 250, 248, 0.93), rgba(255, 250, 248, 0.95)),
     url("images/backgrounds/sakura.png");
   background-attachment: fixed;
   line-height: 1.6;
@@ -88,7 +89,9 @@ a {
 .featured h2,
 .custom-copy h2,
 .contact h2,
-.testimonials h2 {
+.testimonials h2,
+.ordering-box h2,
+.cta-box h2 {
   margin: 0 0 1rem;
   font-size: clamp(2rem, 4vw, 3rem);
   line-height: 1.1;
@@ -100,7 +103,8 @@ a {
 .custom-copy p,
 .contact p,
 .testimonial-quote,
-.hero-text {
+.hero-text,
+.cta-box p {
   color: var(--muted);
 }
 
@@ -109,7 +113,7 @@ a {
   top: 0;
   z-index: 40;
   backdrop-filter: blur(18px);
-  background: rgba(255, 250, 248, 0.82);
+  background: rgba(255, 250, 248, 0.84);
   border-bottom: 1px solid var(--line);
 }
 
@@ -183,7 +187,8 @@ a {
     background var(--transition),
     color var(--transition),
     border-color var(--transition),
-    opacity var(--transition);
+    opacity var(--transition),
+    box-shadow var(--transition);
 }
 
 .cart-button {
@@ -230,6 +235,7 @@ a {
 .btn-primary {
   background: var(--sage);
   color: #fff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .btn-primary:hover,
@@ -238,7 +244,7 @@ a {
 }
 
 .btn-secondary {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.88);
   color: var(--text);
   border-color: var(--line);
 }
@@ -259,7 +265,7 @@ a {
   margin: 0 0 1rem;
   font-size: clamp(2.8rem, 5vw, 5rem);
   line-height: 0.98;
-  max-width: 10ch;
+  max-width: 11ch;
 }
 
 .hero-text {
@@ -327,7 +333,7 @@ a {
   height: 300px;
   left: 0;
   bottom: 0;
-  border: 8px solid rgba(255, 255, 255, 0.85);
+  border: 8px solid rgba(255, 255, 255, 0.88);
 }
 
 .about-grid,
@@ -349,7 +355,9 @@ a {
 .testimonials-shell,
 .pairing-card,
 .product-card,
-.testimonial-card {
+.testimonial-card,
+.ordering-box,
+.cta-box {
   background: var(--surface);
   border: 1px solid rgba(255, 255, 255, 0.55);
   box-shadow: var(--shadow);
@@ -360,7 +368,9 @@ a {
 .featured-copy,
 .custom-copy,
 .contact-shell,
-.testimonials-shell {
+.testimonials-shell,
+.ordering-box,
+.cta-box {
   padding: 2rem;
 }
 
@@ -394,10 +404,6 @@ a {
   object-fit: cover;
 }
 
-.featured-grid {
-  gap: 2.2rem;
-}
-
 .filters {
   display: flex;
   flex-wrap: wrap;
@@ -407,7 +413,7 @@ a {
 
 .filter-btn {
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.88);
   color: var(--text);
   padding: 0.8rem 1rem;
   border-radius: 999px;
@@ -432,6 +438,15 @@ a {
 
 .product-card img {
   aspect-ratio: 4 / 3;
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover {
+  box-shadow: var(--shadow-strong);
+}
+
+.product-card:hover img {
+  transform: scale(1.05);
 }
 
 .product-content {
@@ -476,8 +491,20 @@ a {
 }
 
 .price {
-  font-weight: 800;
-  font-size: 1.1rem;
+  display: block;
+  font-weight: 900;
+  font-size: 1.25rem;
+  color: var(--sage-deep);
+  line-height: 1;
+}
+
+.price-note {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.78rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .text-btn {
@@ -486,6 +513,51 @@ a {
   color: var(--sage-deep);
   font-weight: 700;
   padding: 0.25rem 0.2rem;
+}
+
+.ordering-box {
+  text-align: center;
+}
+
+.ordering-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0 0;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.ordering-box li {
+  color: var(--muted);
+}
+
+.banner {
+  background: url("images/products/cupcakes-pink.jpg") center/cover no-repeat;
+  min-height: 360px;
+  display: grid;
+  place-items: center;
+  margin: 1rem 0;
+}
+
+.banner-overlay {
+  width: 100%;
+  min-height: 360px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background: linear-gradient(rgba(45, 36, 34, 0.32), rgba(45, 36, 34, 0.32));
+  color: #fff;
+  padding: 2rem;
+}
+
+.banner-overlay .eyebrow {
+  color: #fff;
+}
+
+.banner-overlay h2 {
+  margin: 0;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1;
 }
 
 .custom-image-stack {
@@ -560,6 +632,12 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.cta-box {
+  text-align: center;
+  background: var(--pink-soft);
+  padding: 3.5rem 2rem;
 }
 
 .testimonials-shell {
@@ -736,13 +814,20 @@ a {
   background: transparent;
   color: var(--pink-deep);
   font-weight: 700;
+  padding: 0;
+  margin-top: 0.35rem;
 }
 
 .cart-total {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
   margin-bottom: 0.9rem;
+}
+
+#cartSummary {
+  color: var(--muted);
 }
 
 .modal {
@@ -829,6 +914,26 @@ a {
   color: #fff;
 }
 
+.toast {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  background: var(--text);
+  color: #fff;
+  padding: 0.9rem 1.1rem;
+  border-radius: 999px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 80;
+  box-shadow: var(--shadow);
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(28px);
@@ -886,7 +991,7 @@ a {
     flex-direction: column;
     align-items: stretch;
     padding: 1rem;
-    background: rgba(255, 255, 255, 0.96);
+    background: rgba(255, 255, 255, 0.97);
     border: 1px solid var(--line);
     border-radius: 22px;
     box-shadow: var(--shadow);
@@ -919,6 +1024,11 @@ a {
 
   .hero-copy h1 {
     max-width: 100%;
+    font-size: 2.2rem;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
   }
 
   .hero-visual,
@@ -937,10 +1047,7 @@ a {
   }
 
   .menu-grid,
-  .gallery-grid {
-    grid-template-columns: 1fr;
-  }
-
+  .gallery-grid,
   .pairings-grid {
     grid-template-columns: 1fr;
   }
@@ -957,5 +1064,10 @@ a {
 
   .cart-item > div:last-child {
     grid-column: 2;
+  }
+
+  .banner,
+  .banner-overlay {
+    min-height: 260px;
   }
 }
